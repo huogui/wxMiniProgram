@@ -7,4 +7,6 @@
       npm i vant-weapp
       
       构建npm
-2.使用ui库(vant-weapp) 组件更丰富的库 wux-weapp
+2.使用ui库：vant-weapp
+
+      组件更丰富的库： wux-weapp
