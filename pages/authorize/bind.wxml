@@ -1,0 +1,29 @@
+ <view class="wrapper">
+  <view class="logo">
+    <image src="/resources/images/logo.png" mode="aspectFit" class="logoImage"></image>
+  </view>
+  <view class="form_group flex">
+    <view class='prefix'>+86</view>
+    <view class="hr">|</view>
+    <input bindinput='phoneOnchange' type="number" maxlength="11" placeholder='请输入手机号' placeholder-class='placeholder' value="{{phone}}"/>
+  </view>
+  <view class="form_group flex">
+     <input bindinput='codeOnchange' placeholder='请输入验证码' placeholder-class='placeholder' value="{{code}}"/>
+     <view class="hr">|</view>
+     <view wx:if='{{isSend}}' class="verificationCode {{isLoading?'isLoading':''}}" bindtap="getCode">
+      <van-loading wx:if='{{isLoading}}' type="spinner" size='16px' color="rgba(144,195,31,1);" />
+      <view class="code">获取验证码</view>
+    </view>
+     <view wx:if='{{timing}}' class="timing">{{time}}后可重新获取</view>
+     <view wx:if='{{againSend}}' class="verificationCode" bindtap="getCode">
+      <van-loading wx:if='{{isLoading}}' type="spinner" size='16px' color="rgba(2,151,62,1);" />
+      <view class="code">重新获取</view>
+     </view>
+  </view>
+  <view class="form_bottom">
+    <button class="btn" bindtap='login'>登录</button>
+  </view>
+</view>
+<van-toast id="van-toast" />
+<van-notify id="van-notify" />
+<van-notify id="van-error" />

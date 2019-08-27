@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "van-toast": "/vant-weapp/toast/index",
+    "van-notify": "/vant-weapp/notify/index",
+    "van-loading": "/vant-weapp/loading/index"
+  },
+  "disableScroll": true,
+  "navigationBarTitleText": "登录"
+}
